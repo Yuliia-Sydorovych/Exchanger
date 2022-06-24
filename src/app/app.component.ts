@@ -28,8 +28,8 @@ export class AppComponent {
       .subscribe(response => {
         this.posts = response;
         this.posts.forEach((element: { cc: string; rate: any; }) => {
-          element.cc === this.ngOptions[1]?this.usd = element.rate:null;
-          element.cc === this.ngOptions[2]?this.eur = element.rate:null;
+          element.cc === this.ngOptions[1]?this.usd = element.rate:false;
+          element.cc === this.ngOptions[2]?this.eur = element.rate:false;
         });
       });
   }
