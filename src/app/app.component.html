@@ -1,2 +1,12 @@
-<app-header></app-header>
-<app-conventer></app-conventer>
+<div [className]="'content'">
+    <app-header [post]='posts'></app-header>
+    <app-conventer 
+        [(rightValue)]='rightValue' 
+        [(leftValue)]='leftValue'
+        [(chosenOptRight)] = 'chosenOptRight'
+        [(chosenOptLeft)] = 'chosenOptLeft'
+        [(options)]='ngOptions'
+        [(usd)]='usd'
+        [(eur)]='eur'>
+    </app-conventer>
+</div>

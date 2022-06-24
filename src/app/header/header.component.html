@@ -1,3 +1,25 @@
-<div>
-    Official Exchange Rates
+<div [className]="'header'">
+    <div [className]="'header__title'">
+        Official Exchange Rates
+    </div>
+    <div [className]="'header__rate'">
+        <div *ngFor="let p of post" [className]="'header__currency'">
+            <div *ngIf="(p.cc=='USD')">
+                <span>
+                    USD
+                </span>
+                <span>
+                    {{ p.rate }}
+                </span>
+            </div>
+            <div *ngIf="(p.cc=='EUR')">
+                <span>
+                    EUR
+                </span> 
+                <span>
+                    {{ p.rate }}
+                </span>
+            </div>
+        </div>
+    </div>
 </div>

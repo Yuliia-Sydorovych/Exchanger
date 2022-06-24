@@ -1,0 +1,17 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: url('./assets/back.jpg');
+    color: rgb(10, 3, 17);
+}
+
+app-root {
+    display: block;
+    height: 100%;
+}

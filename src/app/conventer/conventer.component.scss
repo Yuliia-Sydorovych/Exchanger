@@ -1,0 +1,64 @@
+.converter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+
+  &__leftBlock {
+    margin-right: 100px;
+  }  
+
+  &__leftBlock, &__rightBlock {
+    height: 100px;
+
+    & > select {
+      width: 100px;
+      background-color: transparent;
+      font-weight: 700;
+    }
+  }
+  
+  &__input {
+    padding: 20px;
+  }
+  
+  &__input, select {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 30px;
+    outline:none;
+  }
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .converter {
+    flex-direction: column;
+  
+    &__leftBlock {
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }  
+  
+    &__leftBlock, &__rightBlock {
+      height: 50px;
+
+      & > select {
+        width: 70px;
+        background-color: transparent;
+      }
+    }
+
+    &__input {
+      padding: 5px;
+    }
+
+    &__input, select {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,3 +1,40 @@
-<div>
-    Currency conventer
+<div [className]="'converter'"> 
+  <div [className]="'converter__leftBlock'">
+    <input
+      type='number' 
+      placeholder='Enter number...'
+      [className]="'converter__input'"
+      [(ngModel)]='leftValue'
+      [value]='leftValue'
+      (ngModelChange)='onInputLeftValue($event); selectedLeftOption()'
+    />
+    <select name='left' [(ngModel)]='chosenOptLeft' (change)='selectedLeftOption() '>
+        <option
+          *ngFor='let opt of options'
+          [selected]='opt === chosenOptLeft'
+          [value]='opt'
+        >
+          {{ opt }}
+        </option>
+    </select>
+  </div>
+  <div [className]="'converter__rightBlock'">
+    <input
+      type='number'
+      placeholder='Enter number...'
+      [className]="'converter__input'"
+      [(ngModel)]='rightValue'
+      [value]='rightValue'
+      (ngModelChange)='onInputRightValue($event); selectedRightOption()'
+    />
+    <select name='right' [(ngModel)]='chosenOptRight' (change)='selectedRightOption()'>
+        <option
+          *ngFor='let opt of options'
+          [selected]='opt === chosenOptRight'
+          [value]='opt'
+        >
+          {{ opt }}
+        </option>
+    </select>
+  </div>
 </div>
